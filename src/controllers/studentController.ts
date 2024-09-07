@@ -1,4 +1,3 @@
-import { log } from 'console';
 import Student from '../models/studentModel';
 import { Request, Response } from "express";
 
@@ -14,8 +13,6 @@ export const loadPage = async (req : Request, res : Response ) : Promise<void> =
 export const addStudent = async ( req : Request, res : Response) : Promise<void> => {
     try{
         const { Aname, Aemail, Aage } = req.body;
-        console.log(req.body);
-        
         const student = new Student({
             name : Aname,
             email : Aemail,
@@ -35,8 +32,6 @@ export const addStudent = async ( req : Request, res : Response) : Promise<void>
 export const editStudent = async ( req : Request , res : Response) : Promise<void> => {
     try{
         const { Ename, Eemail, Eage, id } = req.body;
-        console.log(req.body,'wug');
-        
         const updateStudent = await Student.findByIdAndUpdate(id,{
             $set : {
                 name : Ename,

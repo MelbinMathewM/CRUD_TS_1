@@ -103,7 +103,6 @@ if(Aform){
         let Aemail = (document.getElementById('Aemail') as HTMLInputElement)?.value || '';
         let AageS = (document.getElementById('Aage') as HTMLInputElement)?.value || '0';
         let Aage = + AageS;
-        console.log(verifyForm(Aname, Aemail, Aage), 'jewife');
     
         if (verifyForm(Aname, Aemail, Aage)) {
             const response = await fetch('/create', {
@@ -114,7 +113,6 @@ if(Aform){
                 body: JSON.stringify({ Aname, Aemail, Aage })
             })
             const result = await response.json();
-            console.log(result);
     
             if (result.success) {
                 const addModal = document.getElementById('add-student-modal');
