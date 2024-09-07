@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "build": "tsc && copyfiles -u 1 src/views/* dist",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec ts-node src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.6.1",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.4",
+    "copyfiles": "^2.4.1",
+    "ts-node": "^10.9.2"
+  },
+  "name": "ts-crud-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
